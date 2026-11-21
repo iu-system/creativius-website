@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREATIViUS Studio</title>
+<meta name="description" content="The official website of CREATIViUS Studio, children's book illustration. Our new website is coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout idea: one storybook page. Cover art on top, a short note, the official badge, then contacts. */
+  --paper: #FFFBF4;
+  --panel: #FFF1DC;
+  --ink: #2C3550;
+  --ink-soft: #5D6680;
+  --accent: #3E7C8C;
+  --accent-ink: #FFFFFF;
+  --sun: #F5C26B;
+  --line: #EADDC8;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
+  --radius: 18px;
+  --max: 1080px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.65; }
+img { max-width: 100%; display: block; }
+a:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 8px; }
+h1, h2 { font-family: var(--font-display); line-height: 1.2; text-wrap: balance; margin: 0; }
+p { margin: 0; max-width: 60ch; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+header { border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; padding-bottom: 16px; flex-wrap: wrap; }
+.logo { font-family: var(--font-display); font-weight: 700; font-size: 1.45rem; letter-spacing: .02em; }
+.logo span { color: var(--accent); font-style: italic; }
+.soon { font-weight: 700; font-size: .85rem; color: var(--ink); background: var(--panel); border: 1px solid var(--line); padding: 5px 14px; border-radius: 999px; }
+
+.hero { position: relative; margin: 32px 0 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16 / 9; display: grid; align-items: center; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-text { position: relative; width: min(36%, 400px); margin-left: 5%; display: grid; gap: 14px; }
+.eyebrow { font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; color: var(--accent); }
+.hero-text h1 { font-size: clamp(1.9rem, 3.6vw, 3.1rem); }
+.hero-text p { color: var(--ink-soft); }
+
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0; }
+.box { background: var(--panel); border-radius: var(--radius); padding: 26px 28px; display: grid; gap: 10px; align-content: start; }
+.box h2 { font-size: 1.4rem; }
+.official { background: #FFFFFF; border: 2px solid var(--accent); }
+.badge { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--accent); font-size: .9rem; text-transform: uppercase; letter-spacing: .08em; }
+.badge svg { width: 20px; height: 20px; flex: none; }
+
+.contact { margin: 0 0 48px; display: grid; gap: 18px; }
+.contact h2 { font-size: 1.6rem; }
+.channels { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.channel { background: #FFFFFF; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: grid; gap: 8px; align-content: start; }
+.label { font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: .78rem; color: var(--ink-soft); }
+.value { font-size: 1.1rem; font-weight: 700; word-break: break-word; }
+.btn { display: inline-block; text-decoration: none; font-weight: 700; padding: 12px 24px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); text-align: center; justify-self: start; }
+
+footer { border-top: 1px solid var(--line); padding: 26px 0; color: var(--ink-soft); font-size: .9rem; }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+  .hero { aspect-ratio: auto; margin-top: 20px; }
+  .hero-img { position: static; aspect-ratio: 16 / 9; }
+  .hero-text { width: auto; margin: 0; padding: 22px 4px 0; }
+  .info { grid-template-columns: 1fr; margin: 28px 0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo">CREATI<span>Vi</span>US</div>
+    <span class="soon">Website coming soon</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <img class="hero-img" src="images/cover.jpg" alt="A boy in a yellow raincoat and his beagle splashing in a puddle" width="1600" height="900">
+    <div class="hero-text">
+      <p class="eyebrow">Children's Book Illustration</p>
+      <h1>Our new website is on its way.</h1>
+      <p>Bright, gentle illustrations that bring children's stories to life.</p>
+    </div>
+  </div>
+
+  <div class="info">
+    <section class="box">
+      <h2>Thank you for your patience</h2>
+      <p>We are still building this website. Our full portfolio, services, and ordering guide will be here soon. In the meantime, feel free to reach out to us directly.</p>
+    </section>
+    <section class="box official">
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Official website</span>
+      <h2>This is the real CREATIViUS Studio</h2>
+      <p>creativiusstudio.com and creativius.studio are our only official websites. Please contact us only through the channels listed below.</p>
+    </section>
+  </div>
+
+  <section class="contact">
+    <h2>Official contacts</h2>
+    <p style="color: var(--ink-soft)">We reply Monday to Saturday.</p>
+    <div class="channels">
+      <div class="channel"><span class="label">Email</span><span class="value">hello@creativius.studio</span><a class="btn" href="mailto:hello@creativius.studio">Send an email</a></div>
+      <div class="channel"><span class="label">WhatsApp</span><span class="value">+62 852 2499 7979</span><a class="btn" href="https://wa.me/6285224997979">Chat on WhatsApp</a></div>
+      <div class="channel"><span class="label">Instagram</span><span class="value">Creativius Studio</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 CREATIViUS Studio. All rights reserved.</span>
+    <span>Official website</span>
+  </div>
+</footer>
+</body>
+</html>
